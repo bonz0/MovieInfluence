@@ -64,9 +64,9 @@ public class PageRank {
 		int iterationCount = 1;
 		while(!converged) {
 			if(fileSystem.exists(path)) {
-				System.out.println("------------------------Directory Exists-----------------------");
+				System.out.println("-----------------------------Directory Exists-----------------------------");
 				fileSystem.delete(path, true);
-				System.out.println("------------------------Directory Deleted------------------------");
+				System.out.println("-----------------------------Directory Deleted-----------------------------");
 			}
 			jedisServer.set(hasConverged, "true");
 			System.out.println("Iteration number: " + iterationCount++);
